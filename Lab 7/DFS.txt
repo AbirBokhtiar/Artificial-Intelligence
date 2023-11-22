@@ -1,0 +1,39 @@
+import queue
+ 
+def DFS_matrix(matrix,s):
+    stack=queue.LifoQueue()
+    stack.put(s)
+    
+    visited=[]
+    for i in range(len(matrix[0])):
+        visited.append(0)
+    
+    while not stack.empty():
+        node = stack.get()
+        print(node,end=" ")
+        for j in range(len(matrix[node])):
+            if matrix[node][j]==1 and visited[j]==0:
+                stack.put(j)
+                visited[j]=1
+
+
+
+
+
+def DFS_List(adj,s):
+    stack=queue.LifoQueue()
+    stack.put(s)
+    
+    visited=[]
+    for i in range(len(matrix[0])):
+        visited.append(0)
+    
+    while not stack.empty():
+        node = stack.get()
+        print(node,end=" ")
+        for j in adj[node]:
+            if visited[j]==0:
+                stack.put(j)
+                visited[j]=1
+DFS_List(adj,0)
+
