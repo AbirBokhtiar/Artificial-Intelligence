@@ -1,1 +1,2 @@
-# Artificial-Intelligence
+# AI-Searching-Techniques
+Different Searching Techniques for AI
